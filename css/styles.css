@@ -74,6 +74,10 @@ a {
     background-color: var(--accent-color);
     cursor: pointer;
 }
+.btn:hover,
+.btn:focus {
+    background-color: #188ce8;
+}
 /* секция наши достоинства */
 .title-benefits {
     font-size: 14px;

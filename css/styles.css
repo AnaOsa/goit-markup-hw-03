@@ -5,6 +5,7 @@
     --title-color: #212121;
     --white-text-color: #ffffff;
     --btn-portfolio: #f5f4fa;
+    --works-gap: 30px;
 }
 body {
     min-width: 1600px;
@@ -25,6 +26,8 @@ a {
 }
 img {
     display: block;
+    max-width: 100%;
+    height: auto;
 }
 .container {
     margin-left: auto;
@@ -250,6 +253,7 @@ img {
 /* Портфолио  */
 .filter {
     display: flex;
+    justify-content: center;
 }
 .filter-item:not(:last-child) {
     margin-right: 8px;
@@ -279,11 +283,17 @@ img {
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
         0px 2px 2px rgba(0, 0, 0, 0.12);
 }
-.works-title {
-    font-size: 18px;
-    line-height: 2;
-    letter-spacing: 0.06em;
-    color: var(--title-color);
+
+.works {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: calc(-1 * var(--works-gap));
+    margin-top: calc(-1 * var(--works-gap));
+}
+.works-item {
+    flex-basis: calc(100% / 3 - 30px);
+    margin-left: var(--works-gap);
+    margin-top: var(--works-gap);
 }
 .border {
     padding: 20px 24px;
@@ -293,7 +303,15 @@ img {
     border-top-style: none;
     box-sizing: border-box;
 }
+.works-title {
+    margin-bottom: 4px;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+    color: var(--title-color);
+}
 .works-text {
+    margin: 0;
     font-size: 16px;
     line-height: 1.87;
     letter-spacing: 0.03em;
